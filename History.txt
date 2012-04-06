@@ -1,3 +1,6 @@
+==== 1.1.6 / 2012-02-12
+- Added header elements in String part
+
 === 1.1.5 / 2012-02-12
 
 - Fix length/bytesize of parts in 1.9 (#7, #14) (Jason Moore)
