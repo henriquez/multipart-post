@@ -38,6 +38,8 @@ module Parts
       part = ''
       part << "--#{boundary}\r\n"
       part << "Content-Disposition: form-data; name=\"#{name.to_s}\"\r\n"
+      part << "Content-Type: application/json; charset=UTF-8\r\n"
+      part << "Content-Transfer-Encoding: 8bit\r\n"
       part << "\r\n"
       part << "#{value}\r\n"
     end
@@ -63,7 +65,7 @@ module Parts
       part = ''
       part << "--#{boundary}\r\n"
       part << "Content-Disposition: #{content_disposition}; name=\"#{name.to_s}\"; filename=\"#{filename}\"\r\n"
-      part << "Content-Length: #{content_len}\r\n"
+      #part << "Content-Length: #{content_len}\r\n"
       if content_id = opts["Content-ID"]
         part << "Content-ID: #{content_id}\r\n"
       end
